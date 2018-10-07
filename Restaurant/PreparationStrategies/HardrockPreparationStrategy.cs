@@ -8,7 +8,7 @@ namespace Restaurant
             this.name = "hardrock preparation";
         }
 
-        public override void execute()
+        public override void Execute()
         {
             Console.Write("take a collection of knifes and set some hardrock music on");
         }

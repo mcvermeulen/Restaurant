@@ -6,17 +6,17 @@ namespace RestaurantTests
 {
     public class CookTests
     {
-        private Cook cook;
+        private readonly Cook cook;
 
-        CookTests() 
+        public CookTests() 
         {
             this.cook = new Cook("Marcel", new SimplePreparationStrategy());
         }
 
         [Fact]
-        public void shouldReturnSimplePreparationType()
+        public void ShouldReturnSimplePreparationType()
         {
-            Assert.True(cook.getPreparation() is SimplePreparationStrategy, "jupz");
+            Assert.True(cook.GetPreparation() is SimplePreparationStrategy, "Cook doesn't have a simple preparation");
         }
     }
 }

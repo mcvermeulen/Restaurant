@@ -8,7 +8,7 @@ namespace Restaurant
             this.name = "meditation preparation";
         }
 
-        public override void execute()
+        public override void Execute()
         {
             Console.Write("5 minutes of mindfulness and a short breathing exercise");
         }

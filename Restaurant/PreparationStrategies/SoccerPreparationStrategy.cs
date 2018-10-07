@@ -8,7 +8,7 @@ namespace Restaurant
             this.name = "soccer preparation";
         }
 
-        public override void execute()
+        public override void Execute()
         {
             Console.Write("open a beer and hum the anthem of favourite soccer team");
         }

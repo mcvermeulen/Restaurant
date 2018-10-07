@@ -3,7 +3,7 @@ namespace Restaurant
 {
     public class Cook
     {
-        private String name;
+        private readonly String name;
         private PreparationStrategy preparation;
 
         public Cook(String name, PreparationStrategy preparation)
@@ -12,19 +12,19 @@ namespace Restaurant
             this.preparation = preparation;
         }
 
-        public void prepare()
+        public void Prepare()
         {
-            Console.Write(name + " has the " + preparation.getName() + ":  ");
-            preparation.execute();
+            Console.Write(name + " has the " + preparation.GetName() + ":  ");
+            preparation.Execute();
             Console.Write("\n");
         }
 
-        public PreparationStrategy getPreparation()
+        public PreparationStrategy GetPreparation()
         {
             return preparation;
         }
 
-        public void setPreparation(PreparationStrategy preparation)
+        public void SetPreparation(PreparationStrategy preparation)
         {
             this.preparation = preparation;
         }

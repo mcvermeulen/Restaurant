@@ -13,21 +13,21 @@ namespace Restaurant
             Cook Maria = new Cook("Maria", new SoccerPreparationStrategy());
             Cook Rody = new Cook("Rody", new SoccerPreparationStrategy());
 
-            r.addCook(Christian);
-            r.addCook(Peter);
-            r.addCook(Maria);
-            r.addCook(Rody);
+            r.AddCook(Christian);
+            r.AddCook(Peter);
+            r.AddCook(Maria);
+            r.AddCook(Rody);
 
-            r.prepareCooks();
+            r.PrepareCooks();
 
-            r.removeAllCooksWithPreparationType("soccer preparation");
-            r.prepareCooks();
+            r.RemoveAllCooksWithPreparationType("soccer preparation");
+            r.PrepareCooks();
 
             Cook Daan = new Cook("Daan", new MeditationPreparationStrategy());
-            r.addCook(Daan);
+            r.AddCook(Daan);
 
-            r.replaceExistingCookWithNewCook(Peter, "Michel");
-            r.prepareCooks();
+            r.ReplaceExistingCookWithNewCook(Peter, "Michel");
+            r.PrepareCooks();
         }
     }
 }

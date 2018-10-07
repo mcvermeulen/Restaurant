@@ -10,8 +10,8 @@ namespace Restaurant
             this.name = "preparation";
         }
 
-        public String getName() { return name; }
+        public String GetName() { return name; }
 
-        public abstract void execute();
+        public abstract void Execute();
     }
 }

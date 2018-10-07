@@ -5,8 +5,8 @@ namespace Restaurant
 {
     public class Restaurant
     {
-        private String name;
-        private List<Cook> cooks;
+        private readonly String name;
+        private readonly List<Cook> cooks;
 
 
         public Restaurant(String name)
@@ -15,27 +15,27 @@ namespace Restaurant
             cooks = new List<Cook>();
         }
 
-        public void addCook(Cook cook)
+        public void AddCook(Cook cook)
         {
             cooks.Add(cook);
         }
 
-        public void removeAllCooksWithPreparationType(String preparation)
+        public void RemoveAllCooksWithPreparationType(String preparation)
         {
-            cooks.RemoveAll((Cook cook) => cook.getPreparation().getName().Equals(preparation));
+            cooks.RemoveAll((Cook cook) => cook.GetPreparation().GetName().Equals(preparation));
         }
 
-        public void prepareCooks()
+        public void PrepareCooks()
         {
             foreach (Cook c in cooks)
             {
-                c.prepare();
+                c.Prepare();
             }
         }
 
-        public void replaceExistingCookWithNewCook(Cook leavingCook, String name)
+        public void ReplaceExistingCookWithNewCook(Cook leavingCook, String name)
         {
-            Cook newCook = new Cook(name, leavingCook.getPreparation());
+            Cook newCook = new Cook(name, leavingCook.GetPreparation());
             cooks.Add(newCook);
             cooks.Remove(leavingCook);
         }

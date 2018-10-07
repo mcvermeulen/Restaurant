@@ -8,7 +8,7 @@ namespace Restaurant
             this.name = "simple preparation";
         }
 
-        public override void execute()
+        public override void Execute()
         {
             Console.Write("put an apron on");
         }
